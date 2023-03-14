@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>shine-framework-demo</artifactId>
+    <groupId>io.github.SilenceShine</groupId>
+    <version>${revision}</version>
+    <name>shine-framework</name>
+    <description>Shine Demo</description>
+    <url>https://github.com/SilenceShine/shine-framework-demo.git</url>
+
+    <packaging>jar</packaging>
+
+    <repositories>
+        <repository>
+            <id>io.github.SilenceShine</id>
+            <url>https://raw.githubusercontent.com/SilenceShine/maven-repository/release</url>
+        </repository>
+    </repositories>
+    
+    <developers>
+        <developer>
+            <id>SilenceShine</id>
+            <name>SilenceShine</name>
+            <email>xuansy0127@gmail.com</email>
+            <organization>SilenceShine</organization>
+            <organizationUrl>https://github.com/SilenceShine</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <revision>0.3.1</revision>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>17</java.version>
+
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+
+        <lombok.version>1.18.26</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.SilenceShine</groupId>
+                <artifactId>shine-framework-spring</artifactId>
+                <version>0.3.1-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.SilenceShine</groupId>
+            <artifactId>shine-framework-spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
