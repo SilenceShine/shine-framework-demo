@@ -1,8 +1,8 @@
 package shine.framework.spring.demo;
 
+import io.github.SilenceShine.shine.util.log.LogUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import shine.framework.util.log.LogUtil;
 
 /**
  * @author SilenceShine
