@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: shine-framework-demo-spring-mybatis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shine-framework-demo-spring-mybatis?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
